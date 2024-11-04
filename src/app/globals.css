@@ -17,10 +17,8 @@
     body,
     html {
         scroll-behavior: smooth;
-        overflow-x: hidden;
     }
 
-    
     /* {
         cursor: none;
     } */

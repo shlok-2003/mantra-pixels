@@ -4,7 +4,7 @@ import * as React from "react";
 import * as SwitchPrimitives from "@radix-ui/react-switch";
 
 import { cn } from "@/lib/utils";
-import { Moon, Sun } from "lucide-react";
+import { IoIosMoon, IoIosSunny } from "react-icons/io";
 
 const Switch = React.forwardRef<
     React.ElementRef<typeof SwitchPrimitives.Root>,
@@ -20,11 +20,11 @@ const Switch = React.forwardRef<
     >
         <SwitchPrimitives.Thumb
             className={cn(
-                "pointer-events-none block h-4 w-4 rounded-full bg-white shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0 dark:bg-neutral-950",
+                "pointer-events-none block h-4 w-4 rounded-full bg-white shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0 dark:bg-neutral-950 [&>.sun]:data-[state=checked]:opacity-0 [&>.moon]:data-[state=unchecked]:opacity-0",
             )}
         >
-            <Sun className="h-3 w-3 text-yellow-500 absolute data-[state=checked]:opacity-0 data-[state=unchecked]:opacity-100 transition-opacity" />
-            <Moon className="h-3 w-3 text-blue-500 absolute data-[state=checked]:opacity-100 data-[state=unchecked]:opacity-0 transition-opacity" />
+            <IoIosSunny className="sun size-full text-yellow-500 absolute data-[state=checked]:opacity-0 data-[state=unchecked]:opacity-100 transition-opacity" />
+            <IoIosMoon className="moon size-full text-blue-500 absolute data-[state=checked]:opacity-100 data-[state=unchecked]:opacity-0 transition-opacity" />
         </SwitchPrimitives.Thumb>
     </SwitchPrimitives.Root>
 ));

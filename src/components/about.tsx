@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 // import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,14 +15,15 @@ const images = ["one", "two", "three", "four", "five", "six"];
 export default function About() {
     return (
         <section className="grid grid-cols-2 px-32 gap-6 py-10">
-            <Card className="overflow-hidden transition-all duration-300 hover:ring-2 hover:ring-red-500">
-                <CardContent className="p-0">
+            <Card className="overflow-hidden transition-all bg-red-100 duration-300 hover:ring-2 hover:ring-red-500 rounded-none">
+                <CardContent className="p-0 flex">
                     <img
                         src="/devendra.jpg"
                         alt="Devendra Kumar"
-                        className="w-full h-full object-cover"
+                        className="object-cover h-full w-full block"
                     />
                 </CardContent>
+                <CardFooter className="sr-only"></CardFooter>
             </Card>
 
             <div className="flex flex-col gap-6">
@@ -55,7 +56,7 @@ export default function About() {
                     </CardContent>
                 </Card>
 
-                <Card className="overflow-hidden transition-all duration-300 hover:ring-2 hover:ring-red-500 p-1">
+                <Card className="overflow-hidden transition-all duration-300 hover:ring-2 hover:ring-red-500 p-1 rounded-none">
                     <CardContent className="p-0">
                         <Swiper
                             spaceBetween={30}
@@ -75,12 +76,12 @@ export default function About() {
                             {images.map((image) => (
                                 <SwiperSlide
                                     key={image}
-                                    className="flex justify-center items-center rounded-xl overflow-hidden h-full"
+                                    className="flex justify-center items-center rounded-none overflow-hidden h-full"
                                 >
                                     <img
                                         src={`/office-slider/${image}.jpg`}
                                         alt={image}
-                                        className="w-full h-full object-cover block rounded-xl"
+                                        className="w-full h-full object-cover block rounded-none"
                                     />
                                 </SwiperSlide>
                             ))}
