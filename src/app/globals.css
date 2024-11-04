@@ -23,8 +23,8 @@
         cursor: none;
     } */
 
-    /* ::-webkit-scrollbar {
-        width: 10px;
+    ::-webkit-scrollbar {
+        width: 8px;
         background: transparent;
     }
 
@@ -41,17 +41,9 @@
     ::-webkit-scrollbar-thumb,
     ::-webkit-scrollbar-thumb:hover {
         cursor: default;
-    } */
+    }
 
     /* ::-webkit-scrollbar {
         display: none;
     } */
-
-    .swiper-pagination-bullet {
-        background-color: var(--custom-red);
-    }
-
-    .swiper-pagination-bullet-active {
-        background-color: var(--custom-red);
-    }
 }

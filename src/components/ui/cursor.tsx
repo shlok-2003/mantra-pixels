@@ -22,7 +22,7 @@ export default function Cursor() {
 
     return (
         <div
-            className="absolute size-[40px] pointer-events-none border-[1.5px] border-white bg-white/20 overflow-hidden rounded-full -translate-x-[50%] -translate-y-[50%] z-50"
+            className="absolute size-[40px] pointer-events-none border-[1.5px] border-white bg-white/20 overflow-hidden rounded-full -translate-x-[50%] -translate-y-[50%] z-[60]"
             style={{
                 left: `${mousePosition.x}px`,
                 top: `${mousePosition.y}px`,

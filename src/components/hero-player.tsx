@@ -1,6 +1,18 @@
+"use client";
+
+import { useEffect } from "react";
 import DotPattern from "./ui/dot-pattern";
 
 export default function HeroPlayer() {
+    useEffect(() => {
+        const videoElement = document.getElementById("hero-video");
+        if (videoElement) {
+            setTimeout(() => {
+                videoElement.style.display = "block"; // Show the video after 3000 seconds
+            }, 3000);
+        }
+    }, []);
+
     return (
         <div className="relative w-full h-[calc(100vh-6rem)]">
             <video
@@ -10,6 +22,8 @@ export default function HeroPlayer() {
                 muted
                 playsInline
                 preload="auto"
+                id="hero-video"
+                style={{ display: "none" }}
             >
                 <source src="/hero.webm" type="video/webm" />
                 Your browser does not support the video tag.

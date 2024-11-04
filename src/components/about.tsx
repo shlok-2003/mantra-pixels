@@ -5,10 +5,10 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 // import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/pagination";
+import "@/app/globals.css";
 
 const images = ["one", "two", "three", "four", "five", "six"];
 
@@ -60,16 +60,12 @@ export default function About() {
                     <CardContent className="p-0">
                         <Swiper
                             spaceBetween={30}
-                            modules={[Autoplay, Pagination]}
+                            modules={[Autoplay]}
                             slidesPerView={1}
                             loop={true}
                             autoplay={{
                                 delay: 2500,
                                 disableOnInteraction: false,
-                            }}
-                            pagination={{
-                                clickable: true,
-                                dynamicBullets: true,
                             }}
                             className="w-full h-full"
                         >

@@ -51,17 +51,16 @@ const cardData = [
 ];
 
 export default function Services() {
-    const targetRef = useRef<HTMLDivElement>(null);
+    const target = useRef<HTMLDivElement>(null);
 
     const { scrollYProgress } = useScroll({
-        target: targetRef,
-        // offset: ["start start", "end end"],
+        target,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["1.5%", "-70%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["1.5%", "-49%"]);
 
     return (
-        <section className="h-[550vh] font-poppins space-y-10" ref={targetRef}>
+        <section className="h-[550vh] font-poppins space-y-10" ref={target}>
             <div className="text-4xl font-bold text-left sticky top-[10vh] px-12">
                 What We Offer
             </div>

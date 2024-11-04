@@ -3,6 +3,7 @@ import { Open_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/header";
+import Loading from "@/components/ui/loading";
 import ThemeProvider from "@/components/ui/theme-provider";
 // import Cursor from "@/components/ui/cursor";
 
@@ -39,8 +40,9 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
                     attribute="class"
                     defaultTheme="system"
                     enableSystem
-                    // disableTransitionOnChange
+                    disableTransitionOnChange
                 >
+                    <Loading />
                     {/* <Cursor /> */}
                     <Header />
                     {children}
