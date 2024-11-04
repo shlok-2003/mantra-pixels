@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        --custom-red: rgb(220, 31, 38);
+    }
+
+    body,
+    html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+
+    
+    /* {
+        cursor: none;
+    } */
+
+    /* ::-webkit-scrollbar {
+        width: 10px;
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--custom-red);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--custom-red);
+        opacity: 0.1;
+    }
+
+    ::-webkit-scrollbar,
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-thumb:hover {
+        cursor: default;
+    } */
+
+    /* ::-webkit-scrollbar {
+        display: none;
+    } */
+
+    .swiper-pagination-bullet {
+        background-color: var(--custom-red);
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: var(--custom-red);
+    }
+}
